@@ -9,6 +9,10 @@
     font-weight: normal;
     font-style: normal;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "sub";
     color: #000;
@@ -27,7 +31,7 @@ body {
 
 button {
     &:focus {
-        border: 1px solid #000;
+        outline: 1px solid #000;
     }
 }
 
@@ -62,7 +66,6 @@ button {
         position:fixed;
         top: 0;
         right: -100%;
-        display: none;
         width: 700px;
         height: 60px;
         background-color: #000;
@@ -70,7 +73,7 @@ button {
         z-index: 9;
         transition: 0.5s ease;
         &.on {
-            display: block;
+           right: 0;
         }
         .gnb_list {
             display: flex;
@@ -256,7 +259,7 @@ section {
             transition: 0.5s ease;
             .skill_list {
                 display: flex;
-                justify-content: space-between;
+                justify-content: space-around;
                 font-size: 2rem;
                 li {
                     button {
@@ -285,7 +288,7 @@ section {
                     position: relative;
                     left: -300px;
                     display: none;
-                    width: 300px;
+                    width: 250px;
                     opacity: 0;
                 }
                 p {
@@ -415,10 +418,12 @@ section {
         font-size: 2.4rem;
     }
     .btn_top {
-        position: fixed;
+        position: absolute;
         bottom: 200px;
         right:5px ;
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 50px;
         height: 50px;
         border: 2px solid #000;
