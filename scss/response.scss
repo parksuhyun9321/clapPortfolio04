@@ -115,6 +115,7 @@
                 }
                 .skill_view {
                     flex-direction: column;
+                    justify-content: space-around;
                     width: 100%;
                     font-size: 1.8rem;
                 }
@@ -261,10 +262,11 @@
                             span {
                                 width: 12.5vw;
                                 &.end {
-                                    margin-left: 15vw;
+                                    margin-left: 10vw;
                                 }
                             }
                             &:after {
+                                width: 5vw;
                                 height: 1px;
                             }
                         }
@@ -320,6 +322,16 @@
         p {
             line-height: 20vh;
             font-size: 3.4vw;
+        }
+        .btn_top {
+            width: 10.67vw;
+            height: 5.998vh;
+            &:after {
+                font-size: 7vw;
+            }
+            &.on {
+                bottom: 22vh;
+            }
         }
     }
 }
