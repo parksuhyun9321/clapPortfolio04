@@ -9,10 +9,10 @@
         <meta name="Keywords" content="Web, html, 웹 표준, 포트폴리오, 웹퍼블리셔">
         <meta name="description" content="Web, html, 웹 표준, 포트폴리오, 웹퍼블리셔">
         <meta name="Location" content="Seoul Korea">
+        <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
         <link rel="stylesheet" href="../css/reset.css" />
         <link rel="stylesheet" href="../css/layout.css" />
         <link rel="stylesheet" href="../css/response.css">
-        <script src="../js/main.js" defer></script>
     </head>
     <body>
         <div class="skip">
@@ -166,7 +166,7 @@
                                         <img src="../img/portfolio/hmaidLogo.svg" alt="hmaid">
                                     </dt>
                                     <dd>렛츠에이치메이드</dd>
-                                    <dd>MOBILE WEB/APP</dd>
+                                    <dd>MOBILE WEB/ANDROID APP</dd>
                                     <dd>기간 : 2021.04 ~ 2021.06</dd>
                                     <dd>퍼블리싱 : 95%</dd>
                                     <dd>
@@ -179,6 +179,7 @@
                                     <dd class="site_info">* F12 개발자 도구의 Toggle device toolbar 에서 모바일 웹을 확인하실수 있습니다.</dd>
                                     <dd>
                                         <a target="_blank" title="클릭시 새창으로 렛츠에이치메이드 홈페이지 열기" href="http://letshmaid.com">SITE VIEW</a>
+                                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.hmaid.letshmaid">APP DOWN</a>
                                     </dd>
                                 </dl>
                             </div>
@@ -186,7 +187,7 @@
                         <li class="jbro">
                             <div class="contents">
                                 <div class="img_box">
-                                    <img src="../img/portfolio/jbro_off.png" alt="jbro">
+                                    <img src="../img/portfolio/jbro.png" alt="jbro">
                                 </div>
                                 <dl>
                                     <dt>
@@ -224,7 +225,7 @@
                                     <dd>
                                         <span>#HTML5</span>
                                         <span>#CSS3</span>
-                                        <span>#JQUERY</span>
+                                        <span>#JAVASCRIPT</span>
                                     </dd>
                                     <dd>
                                         <a target="_blank" title="클릭시 새창으로 포트폴리오 코드 저장소 열기" href="https://github.com/parksuhyun9321/clapPortfolio04">CODE VIEW</a>
@@ -238,16 +239,13 @@
         </main>
         <footer id="footer">
             <p>ⓒ copyright 2021 clapPortfolio All rights reserved.</p>
-            <button class="btn_top"></button>
+            <a href="#main_visual" class="btn_top"></a>
         </footer>
-        <script>
-            document.querySelector(".skip a").addEventListener("click",function(e){
-                e.preventDefault();
-            })
-
+        <script>    
+            let about_st = 4;
             window.addEventListener("scroll", function () { //스크롤링 이벤트
                 let st = (document.documentElement.scrollTop || window.scrollY || window.pageYOffset) + window.innerHeight;
-                if(st >= document.querySelector(".skill_view").offsetTop*5){
+                if(st >= document.querySelector(".skill_view").offsetTop*about_st){
                     document.querySelector("#about").classList.add("show")
                 } else {
                     document.querySelector("#about").classList.remove("show")
@@ -275,12 +273,29 @@
                     }
                     let src = this.value;
                     let alt = this.textContent.replace("#", "").toLowerCase();
-                    let txt = this.parentNode.children[0].textContent.trim();
+                    let txt = this.parentNode.children[1].textContent.trim();
 
+                    console.log(txt);
                     this.classList.add("on");
                     document.querySelector(".skill_view img").src = src;
                     document.querySelector(".skill_view img").alt = alt;
                     document.querySelector(".skill_view p").innerHTML = txt;
+                });
+            }
+
+            document.querySelector(".btn_gnb").addEventListener("click",function(){
+                document.querySelector(".gnb").classList.add("on");
+            })
+
+            document.querySelector(".btn_close").addEventListener("click",function(){
+                document.querySelector(".gnb").classList.remove("on");
+            });
+
+            let gnb_btn = document.querySelectorAll(".gnb_list li a");
+
+            for(let i=0;i<gnb_btn.length;i++){
+                gnb_btn[i].addEventListener("click",function(){
+                    document.querySelector(".gnb").classList.remove("on");
                 });
             }
 
@@ -308,23 +323,28 @@
                 return c/2*(t*t*t +2) + b;
             }
 
-            document.querySelector(".btn_gnb").addEventListener("click",function(){
-                document.querySelector(".gnb").classList.add("on");
-                setTimeout(() => {
-                    document.querySelector(".gnb").style.right="0";
-                }, 10);
-            })
+            let deviceUA = navigator.userAgent.toLowerCase();
 
-            document.querySelector(".btn_close").addEventListener("click",function(){
-                document.querySelector(".gnb").style.right="-100%";
-                setTimeout(() => {
-                    document.querySelector(".gnb").classList.remove("on");
-                }, 70);
-            });
+            if(deviceUA.indexOf("android") > -1 || deviceUA.indexOf("iphone") > -1 || deviceUA.indexOf("ipad") > -1 ||deviceUA.indexOf("ipod") > -1){
+                about_st = 2;
+                for(let i=0;i<gnb_btn.length;i++){
+                    document.querySelector("html").style.scrollBehavior="unset"
+                    gnb_btn[i].addEventListener("click",function(e){
+                        if(this.textContent.toLowerCase() == "home"){
+                            smoothScroll(0);
+                        } else {
+                            smoothScroll(document.getElementById(`${this.textContent.toLowerCase()}`).offsetTop);
+                        }
+                        // 
+                        document.querySelector(".gnb").classList.remove("on");
+                    });
+                }
 
-            document.querySelector(".btn_top").addEventListener("click",function(){
-                smoothScroll(0)
-            });
+                document.querySelector(".btn_top").addEventListener("click",function(e){
+                    smoothScroll(0);
+                });
+            }
+
         </script>
     </body>
 </html>
