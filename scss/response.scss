@@ -178,8 +178,13 @@
                 font-size: 1.4rem;
             }
             .btn_close {
-                width: 20px;
-                height: 20px;
+                width: 60px;
+                height: 60px;
+                right: 0;
+                span {
+                    left: 15px;
+                    width: 30px;
+                }
             }
         }
     }
