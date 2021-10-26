@@ -27,11 +27,33 @@ body {
         border-radius: 20px;
         background-color: #000;
     }
+    cursor: none;
 }
 
 button {
     &:focus {
         outline: 1px solid #000;
+    }
+}
+
+.item {
+    cursor: none;
+}
+
+.cursor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,0.8);
+    user-select: none;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.5s;
+    &.active {
+        transform: scale(5);
     }
 }
 
@@ -85,6 +107,8 @@ button {
             li {
                 margin-left: 25px;
                 a {
+                    display: block;
+                    line-height: 60px;
                     &:focus {
                         border-color:#fff;
                     }
@@ -93,12 +117,12 @@ button {
         }
         .btn_close {
             position: absolute;
-            top: 45%;
+            top: 50%;
             right: 10px;
             transform: translateY(-50%);
             display: block;
             width: 40px;
-            height: 40px;
+            height: 60px;
             span {
                 position: absolute;
                 top: 45%;
