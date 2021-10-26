@@ -18,19 +18,22 @@
         <div class="skip">
             <a href="#main">본문 바로가기</a>
         </div>
+        <div class="cursor">
+
+        </div>
         <header id="header">
-            <button class="btn_gnb" title="클릭시 메뉴 오픈">
+            <button class="btn_gnb item" title="클릭시 메뉴 오픈">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
             <nav class="gnb">
                 <ul class="gnb_list">
-                    <li><a href="#main_visual">HOME</a></li>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#main_visual" class="item">HOME</a></li>
+                    <li><a href="#about" class="item">ABOUT</a></li>
+                    <li><a href="#portfolio" class="item">PORTFOLIO</a></li>
                 </ul>
-                <button class="btn_close" title="클릭시 gnb 메뉴를 닫음">
+                <button class="btn_close item" title="클릭시 gnb 메뉴를 닫음">
                     <span></span>
                     <span></span>
                 </button>
@@ -84,55 +87,55 @@
                         <h2 class="hidden">skill_list</h2>
                         <ul class="skill_list">
                             <li>
-                                <button value="../img/about/html5.svg" class="on">#HTML5</button>
+                                <button value="../img/about/html5.svg" class="on item">#HTML5</button>
                                 <h3 class="hidden">
                                     적절한 태그 사용으로 웹표준과 접근성에 준수한 레이아웃을 구현합니다.
                                 </h3>
                             </li>
                             <li>
-                                <button value="../img/about/css3.svg">#CSS3</button>
+                                <button value="../img/about/css3.svg" class="item">#CSS3</button>
                                 <h3 class="hidden">
                                     CSS 속성을 이해하며 디자인 시안에 따른 디자인을 구현할 수 있고 미디어 쿼리를 사용해 반응형 웹을 제작할 수 있습니다.
                                 </h3>
                             </li>
                             <li>
-                                <button value="../img/about/sass.svg">#SASS</button>
+                                <button value="../img/about/sass.svg" class="item">#SASS</button>
                                 <h3 class="hidden">
                                     (SASS)SCSS를 이용해 효율적으로 CSS를 작성할수 있습니다.
                                 </h3>
                             </li>
                             <li>
-                                <button value="../img/about/javascript.svg">#JAVASCRIPT</button>
+                                <button value="../img/about/javascript.svg" class="item">#JAVASCRIPT</button>
                                 <h3 class="hidden">
                                     기본 문법을 이해하고 사용하고 있고, 오픈소스를 활용 할 수 있습니다.
                                 </h3>
                             </li>
                             <li>
-                                <button value="../img/about/jquery.svg">#JQUERY</button>
+                                <button value="../img/about/jquery.svg" class="item">#JQUERY</button>
                                 <h3 class="hidden">
                                     이벤트 메소드를 사용, 다양한 플러그인을 활용 할 수 있습니다.
                                 </h3>
                             </li>
                             <li>
-                                <button value="../img/about/php.svg">#PHP</button>
+                                <button value="../img/about/php.svg" class="item">#PHP</button>
                                 <h3 class="hidden">
                                     그누보드를 사용한 프로젝트를 통해 PHP를 접했습니다. PHP코드를 수정하고 코딩한 경험이 있습니다.
                                 </h3>
                             </li>
                             <li>
-                                <button value="../img/about/photoshop.svg">#PHOTOSHOP</button>
+                                <button value="../img/about/photoshop.svg" class="item">#PHOTOSHOP</button>
                                 <h3 class="hidden">
                                     로고작업,명함,카달로그, 광고물을 제작할수 있습니다.
                                 </h3>
                             </li>
                             <li>                           
-                                <button value="../img/about/illustrator.svg">#ILLUSTRATOR</button>
+                                <button value="../img/about/illustrator.svg" class="item">#ILLUSTRATOR</button>
                                 <h3 class="hidden">
                                     로고작업,명함,카달로그, 광고물을 제작할수 있습니다.
                                 </h3> 
                             </li>
                             <li>
-                                <button value="../img/about/figma.svg">#FIGMA</button>
+                                <button value="../img/about/figma.svg" class="item">#FIGMA</button>
                                 <h3 class="hidden">
                                     웹 사이트의 시안과 프로토타입 제작이 가능합니다.
                                 </h3>
@@ -178,8 +181,8 @@
                                     </dd>
                                     <dd class="site_info">* F12 개발자 도구의 Toggle device toolbar 에서 모바일 웹을 확인하실수 있습니다.</dd>
                                     <dd>
-                                        <a target="_blank" title="클릭시 새창으로 렛츠에이치메이드 홈페이지 열기" href="http://letshmaid.com">SITE VIEW</a>
-                                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.hmaid.letshmaid">APP DOWN</a>
+                                        <a target="_blank" title="클릭시 새창으로 렛츠에이치메이드 홈페이지 열기" href="http://letshmaid.com" class="item">SITE VIEW</a>
+                                        <a target="_blank" href="https://play.google.com/store/apps/details?id=com.hmaid.letshmaid" class="item">APP DOWN</a>
                                     </dd>
                                 </dl>
                             </div>
@@ -203,7 +206,7 @@
                                         <span>#JQUERY</span>
                                     </dd>
                                     <dd>
-                                        <a target="_blank" title="클릭시 새창으로 제이브로컴퍼니 홈페이지 열기" href="" class="btn_null">오픈 준비중</a>
+                                        <a target="_blank" title="클릭시 새창으로 제이브로컴퍼니 홈페이지 열기" href="" class="btn_null" class="item">오픈 준비중</a>
                                     </dd>
                                 </dl>
                             </div>
@@ -228,7 +231,7 @@
                                         <span>#JAVASCRIPT</span>
                                     </dd>
                                     <dd>
-                                        <a target="_blank" title="클릭시 새창으로 포트폴리오 코드 저장소 열기" href="https://github.com/parksuhyun9321/clapPortfolio04">CODE VIEW</a>
+                                        <a target="_blank" title="클릭시 새창으로 포트폴리오 코드 저장소 열기" href="https://github.com/parksuhyun9321/clapPortfolio04" class="item">CODE VIEW</a>
                                     </dd>
                                 </dl>
                             </div>
@@ -239,7 +242,7 @@
         </main>
         <footer id="footer">
             <p>ⓒ copyright 2021 clapPortfolio All rights reserved.</p>
-            <a href="#main_visual" class="btn_top"></a>
+            <a href="#main_visual" class="btn_top item"></a>
         </footer>
         <script>    
             let about_st = 4;
@@ -326,6 +329,7 @@
             let deviceUA = navigator.userAgent.toLowerCase();
 
             if(deviceUA.indexOf("android") > -1 || deviceUA.indexOf("iphone") > -1 || deviceUA.indexOf("ipad") > -1 ||deviceUA.indexOf("ipod") > -1){
+                document.querySelector(".cursor").remove();
                 about_st = 2;
                 for(let i=0;i<gnb_btn.length;i++){
                     document.querySelector("html").style.scrollBehavior="unset"
@@ -343,8 +347,29 @@
                 document.querySelector(".btn_top").addEventListener("click",function(e){
                     smoothScroll(0);
                 });
-            }
+            } else {
+                    window.addEventListener("mousemove",function(e){
+                    document.querySelector(".cursor").style.top=e.pageY+"px";
+                    document.querySelector(".cursor").style.left=e.pageX+"px";
+                });
 
+                document.querySelectorAll(".item").forEach(items =>{
+                    let class_name = items.textContent;
+                    items.addEventListener("mouseenter",function(){
+                        document.querySelector(".cursor").classList.add("active");
+                    });
+                    items.addEventListener("mouseleave",function(){
+                        document.querySelector(".cursor").classList.remove("active");
+                    });
+                });
+
+                document.querySelector(".gnb").addEventListener("mouseenter",function(){
+                    document.querySelector(".cursor").style.backgroundColor="rgba(255,255,255,0.8)";
+                });
+                document.querySelector(".gnb").addEventListener("mouseleave",function(){
+                    document.querySelector(".cursor").style.backgroundColor="rgba(0,0,0,0.8)";
+                });
+            }
         </script>
     </body>
 </html>
