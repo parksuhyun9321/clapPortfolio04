@@ -34,7 +34,8 @@
 
 @media all and (max-width: 600px) { #header .gnb { width: 450px; }
   #header .gnb .gnb_list { font-size: 1.4rem; }
-  #header .gnb .btn_close { width: 20px; height: 20px; }
+  #header .gnb .btn_close { width: 60px; height: 60px; right: 0; }
+  #header .gnb .btn_close span { left: 15px; width: 30px; }
   #about .inner .my_career { font-size: 1.6rem; }
   #about .inner .my_career li dl dt { font-size: 1.2rem; }
   #about .inner .my_career li dl dt span { width: 48.73px; }
