@@ -17,6 +17,7 @@ body {
     font-family: "sub";
     color: #000;
     overflow-x: hidden;
+    transition: background-color 0.5s ease;
     &::-webkit-scrollbar {
         position: relative;
         width: 12px;
@@ -28,6 +29,21 @@ body {
         background-color: #000;
     }
     cursor: none;
+    &.loading {
+        position: relative;
+        background-color: rgba(0,0,0,1);
+        overflow: hidden;
+        z-index: 999999999;
+        .cursor {
+            width: 40vw;
+            height: 40vw;
+            background: #fff;
+            background-attachment: fixed;
+            background-size: cover;
+            border: 5px solid #fff;
+            z-index: -1;
+        }
+    }
 }
 
 button {
@@ -38,6 +54,21 @@ button {
 
 .item {
     cursor: none;
+}
+
+.loading_second {
+    position: fixed;
+    left: 10%;
+    bottom: 10%;
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-size: 5rem;
+    font-family: "main";
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    z-index: 9999;
+    font-size: 5rem;
 }
 
 .cursor {
@@ -51,7 +82,7 @@ button {
     user-select: none;
     pointer-events: none;
     z-index: 9999;
-    transition: transform 0.5s;
+    transition: transform 0.5s, width 0.5s, height 0.5s ease;
     &.active {
         transform: scale(5);
     }
