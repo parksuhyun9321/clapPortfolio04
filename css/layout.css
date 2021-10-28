@@ -5,17 +5,23 @@
 
 html { scroll-behavior: smooth; }
 
-body { font-family: "sub"; color: #000; overflow-x: hidden; cursor: none; }
+body { font-family: "sub"; color: #000; overflow-x: hidden; transition: background-color 0.5s ease; cursor: none; }
 
 body::-webkit-scrollbar { position: relative; width: 12px; background-color: #f2f2f2; }
 
 body::-webkit-scrollbar-thumb { width: 100%; border-radius: 20px; background-color: #000; }
 
+body.loading { position: relative; background-color: black; overflow: hidden; z-index: 999999999; }
+
+body.loading .cursor { width: 40vw; height: 40vw; background: #fff; background-attachment: fixed; background-size: cover; border: 5px solid #fff; z-index: -1; }
+
 button:focus { outline: 1px solid #000; }
 
 .item { cursor: none; }
 
-.cursor { position: absolute; top: 0; left: 0; width: 25px; height: 25px; border-radius: 100%; background-color: rgba(0, 0, 0, 0.8); user-select: none; pointer-events: none; z-index: 9999; transition: transform 0.5s; }
+.loading_second { position: fixed; left: 10%; bottom: 10%; display: block; width: 50px; height: 50px; color: #fff; font-size: 5rem; font-family: "main"; text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000; z-index: 9999; font-size: 5rem; }
+
+.cursor { position: absolute; top: 0; left: 0; width: 25px; height: 25px; border-radius: 100%; background-color: rgba(0, 0, 0, 0.8); user-select: none; pointer-events: none; z-index: 9999; transition: transform 0.5s, width 0.5s, height 0.5s ease; }
 
 .cursor.active { transform: scale(5); }
 
