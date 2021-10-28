@@ -283,9 +283,12 @@ section {
             transition: 0.5s ease;
             .skill_list {
                 display: flex;
-                justify-content: space-around;
+                justify-content: center;
                 font-size: 2rem;
                 li {
+                    &:nth-child(n+2){
+                        margin-left: 20px;
+                    }
                     button {
                         display: inline-block;
                         padding: 10px 20px;
