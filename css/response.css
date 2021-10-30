@@ -6,9 +6,7 @@
   #portfolio .portfolio_list li .contents dl { font-size: 2.2rem; }
   #portfolio .portfolio_list li .contents dl dd span { line-height: 1.6; } }
 
-@media all and (max-width: 1100px) { #header .btn_gnb { right: 5px; width: 35px; height: 30px; }
-  #header .btn_gnb span { height: 4px; }
-  #header .gnb { width: 500px; }
+@media all and (max-width: 1100px) { #header .gnb { width: 500px; }
   #header .gnb .gnb_list { font-size: 1.6rem; }
   #header .gnb .btn_close { width: 30px; height: 30px; }
   #main section .inner > h3 { font-size: 3rem; }
@@ -23,13 +21,13 @@
   #about .inner .skill .skill_list { font-size: 1.6rem; }
   #about .inner .skill .skill_list li button { padding: 5px 10px; }
   #about .inner .skill .skill_view { flex-direction: column; justify-content: space-around; width: 100%; font-size: 1.8rem; }
+  #portfolio #popup { position: absolute; top: unset !important; right: unset !important; bottom: 0 !important; left: 50% !important; transform: translateX(-50%) translateY(0) !important; }
+  #portfolio #popup:before { display: none; }
   #portfolio .portfolio_list li .contents { flex-direction: column !important; justify-content: center; text-align: center; }
   #portfolio .portfolio_list li .contents dl { margin: 0 !important; }
   #portfolio .portfolio_list li .contents dl dt { margin-top: 30px; } }
 
-@media all and (max-width: 750px) { #header .btn_gnb { right: 5px; width: 30px; height: 25px; }
-  #header .btn_gnb span { height: 4px; }
-  #portfolio .portfolio_list li .contents .img_box { width: 90%; }
+@media all and (max-width: 750px) { #portfolio .portfolio_list li .contents .img_box { width: 90%; }
   #footer p { font-size: 1.6rem; } }
 
 @media all and (max-width: 600px) { #header .gnb { width: 450px; }
@@ -39,6 +37,7 @@
   #about .inner .my_career { font-size: 1.6rem; }
   #about .inner .my_career li dl dt { font-size: 1.2rem; }
   #about .inner .my_career li dl dt span { width: 48.73px; }
+  #portfolio #popup { width: 100%; }
   #portfolio .portfolio_list li .contents dl dd.site_info { font-size: 1rem; } }
 
 @media all and (max-width: 499px) { #header .gnb { width: 80vw; }
@@ -59,6 +58,8 @@
   #about .inner .skill .skill_view { justify-content: flex-start; margin: 10px 0 0 0; }
   #about .inner .skill .skill_view img { width: 40vw; }
   #about .inner .skill .skill_view p { width: 100%; margin-top: 10px; font-size: 5vw; text-align: center; }
+  #portfolio #popup { width: 90vw; height: 45vh; font-size: 4vw; }
+  #portfolio #popup .inner .link_list { margin-top: 20px; font-size: 6vw; }
   #portfolio .portfolio_list li .contents dl { font-size: 5vw; }
   #portfolio .portfolio_list li .contents dl dt img { width: 60vw; }
   #portfolio .portfolio_list li .contents dl dd { margin-top: 10px !important; }
