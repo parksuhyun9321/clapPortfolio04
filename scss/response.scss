@@ -47,14 +47,6 @@
 
 @media all and (max-width:1100px){
     #header {
-        .btn_gnb {
-            right: 5px;
-            width: 35px;
-            height: 30px;
-            span {
-                height: 4px;
-            }
-        }
         .gnb {
             width: 500px;
             .gnb_list {
@@ -123,6 +115,17 @@
         }
     }
     #portfolio {
+        #popup {
+            position: absolute;
+            top: unset !important;
+            right: unset !important;
+            bottom: 0 !important;
+            left: 50% !important;
+            transform: translateX(-50%) translateY(0) !important;
+            &:before {
+                display: none;
+            }
+        }
         .portfolio_list {
             li {
                 .contents {
@@ -142,16 +145,6 @@
 }
 
 @media all and (max-width:750px){
-    #header {
-        .btn_gnb {
-            right: 5px;
-            width: 30px;
-            height: 25px;
-            span {
-                height: 4px;
-            }
-        }
-    }
     #portfolio {
         .portfolio_list {
             li {
@@ -208,6 +201,9 @@
     }
 
     #portfolio {
+        #popup {
+        width: 100%;
+    }
         .portfolio_list {
             li {
                 .contents {
@@ -303,6 +299,17 @@
         }
     }
     #portfolio {
+        #popup {
+            width: 90vw;
+            height: 45vh;
+            font-size: 4vw;
+            .inner {
+                .link_list {
+                    margin-top: 20px;
+                    font-size: 6vw;
+                }
+            }
+        }
         .portfolio_list {
             li {
                 .contents {
