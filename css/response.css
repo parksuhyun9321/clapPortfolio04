@@ -58,8 +58,6 @@
   #about .inner .skill .skill_view { justify-content: flex-start; margin: 10px 0 0 0; }
   #about .inner .skill .skill_view img { width: 40vw; }
   #about .inner .skill .skill_view p { width: 100%; margin-top: 10px; font-size: 5vw; text-align: center; }
-  #portfolio #popup { width: 90vw; height: 45vh; font-size: 4vw; }
-  #portfolio #popup .inner .link_list { margin-top: 20px; font-size: 6vw; }
   #portfolio .portfolio_list li .contents dl { font-size: 5vw; }
   #portfolio .portfolio_list li .contents dl dt img { width: 60vw; }
   #portfolio .portfolio_list li .contents dl dd { margin-top: 10px !important; }
