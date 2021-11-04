@@ -2,11 +2,12 @@
 <html lang="ko">
     <head>
         <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>clapPortfolio</title>
         <meta name="title" content="웹퍼블리셔 박수현의 포트폴리오 입니다." />
-        <meta name="Keywords" content="Web, html, 웹 표준, 포트폴리오, 웹퍼블리셔" />
-        <meta name="description" content="Web, html, 웹 표준, 포트폴리오, 웹퍼블리셔" />
+        <meta name="Keywords" content="Web, html, 웹 표준, 포트폴리오, 웹퍼블리셔 , 웹퍼블리셔 포트폴리오" />
+        <meta name="description" content="Web, html, 웹 표준, 포트폴리오, 웹퍼블리셔, 웹퍼블리셔 포트폴리오" />
         <meta name="Location" content="Seoul Korea" />
         <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon" />
         <link rel="stylesheet" href="../css/reset.css" />
@@ -27,9 +28,9 @@
             </button>
             <nav class="gnb">
                 <ul class="gnb_list">
-                    <li><a href="#main_visual" class="item" data-target="main_visual">HOME</a></li>
-                    <li><a href="#about" class="item" data-target="about">ABOUT</a></li>
-                    <li><a href="#portfolio" class="item" data-target="portfolio">PORTFOLIO</a></li>
+                    <li><a href="#main_visual" class="item">HOME</a></li>
+                    <li><a href="#about" class="item">ABOUT</a></li>
+                    <li><a href="#portfolio" class="item">PORTFOLIO</a></li>
                 </ul>
                 <button class="btn_close item" title="클릭시 gnb 메뉴를 닫음">
                     <span></span>
@@ -104,7 +105,7 @@
                             <li>
                                 <button value="../img/about/javascript.svg" class="item">#JAVASCRIPT</button>
                                 <h3 class="hidden">
-                                    기본 문법을 이해하고 사용하고 있고, 오픈소스를 활용 할 수 있습니다.
+                                    기본 문법을 이해 하고, 오픈소스를 활용 할 수 있습니다.
                                 </h3>
                             </li>
                             <li>
@@ -124,7 +125,7 @@
                             </li>
                         </ul>
                         <div class="skill_view">
-                            <img src="../img/about/html5.svg" alt="적절한 태그 사용으로 웹표준과 접근성에 준수한 레이아웃을 구현합니다." />
+                            <img src="../img/about/html5.svg" alt="html5" />
                             <p>적절한 태그 사용으로 웹표준과 접근성에 준수한 레이아웃을 구현합니다.</p>
                         </div>
                     </article>
@@ -138,35 +139,6 @@
                         참여한 프로젝트와<br />
                         개인 홈페이지입니다.
                     </h3>
-                    <div id="popup">
-                        <span class="line top"></span>
-                        <span class="line right"></span>
-                        <span class="line bottom"></span>
-                        <span class="line left"></span> 
-                        <div class="inner">
-                            <p>
-                                재직기간 동안 진행한 프로젝트로는 부족해 보여<br>
-                                입사 전 제작한 포트폴리오들도 첨부를 했습니다.<br>
-                                아래의 링크를 클릭하면 접속할 수 있습니다.
-                            </p>
-                            <ul class="link_list">
-                                <li>
-                                    <a href="https://parksuhyun9321.github.io/clapPortfolio02/html/" class="item" target="_blank">
-                                        아이맥 처럼 구현한 포트폴리오
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="http://parksuhyun9321.dothome.co.kr/clapPortfolio02/html/" class="item" target="_blank">
-                                        입사할때 제출한 포트폴리오
-                                    </a>
-                                </li>
-                            </ul>
-                            <ul class="btn_list">
-                                <li><button class="item today_hide">오늘하루 보지 않기</button></li>
-                                <li><button class="item popup_close">닫기</button></li>
-                            </ul>
-                        </div>
-                    </div>
                     <ul class="portfolio_list">
                         <li class="hmaid">
                             <div class="contents">
@@ -213,16 +185,19 @@
                                     </dt>
                                     <dd>제이브로 컴퍼니 (오픈준비중)</dd>
                                     <dd>PC WEB</dd>
-                                    <dd>기간 : 2021.09(본인 작업기간)</dd>
+                                    <dd>기간 : 2021.08(본인 작업기간)</dd>
                                     <dd>퍼블리싱 : 10%</dd>
                                     <dd>
                                         <span>#HTML5</span>
                                         <span>#CSS3</span>
                                         <span>#JQUERY</span>
                                     </dd>
+                                    <dd class="site_info">
+                                        * 제가 제작한 메인배너와 뉴스 슬라이드 부분을 볼수 있습니다.
+                                    </dd>
                                     <dd>
-                                        <a target="_blank" title="클릭시 새창으로 제이브로컴퍼니 홈페이지 열기" href="" class="btn_null item">
-                                            오픈 준비중
+                                        <a target="_blank" title="클릭시 새창으로 제이브로컴퍼니 홈페이지 열기" href="http://parksuhyun9321.dothome.co.kr/jbro_source/html/" class="item">
+                                            SOURCE VIEW
                                         </a>
                                     </dd>
                                 </dl>
@@ -256,6 +231,35 @@
                             </div>
                         </li>
                     </ul>
+                </div>
+                <div id="popup">
+                    <span class="line top"></span>
+                    <span class="line right"></span>
+                    <span class="line bottom"></span>
+                    <span class="line left"></span> 
+                    <div class="inner">
+                        <p>
+                            재직기간 동안 진행한 프로젝트로는 부족해 보여<br>
+                            입사 전 제작한 포트폴리오들도 첨부를 했습니다.<br>
+                            아래의 링크를 클릭하면 접속할 수 있습니다.
+                        </p>
+                        <ul class="link_list">
+                            <li>
+                                <a href="https://parksuhyun9321.github.io/clapPortfolio02/html/" class="item" target="_blank">
+                                    아이맥 처럼 구현한 포트폴리오
+                                </a>
+                            </li>
+                            <li>
+                                <a href="http://parksuhyun9321.dothome.co.kr/clapPortfolio02/html/" class="item" target="_blank">
+                                    입사할때 제출한 포트폴리오
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="btn_list">
+                            <li><button class="item today_hide">오늘하루 보지 않기</button></li>
+                            <li><button class="item popup_close">닫기</button></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         </main>
