@@ -33,20 +33,6 @@ body {
         background-color: rgba(0, 0, 0, 1);
         overflow: hidden;
         z-index: 999999999;
-        .transparent_area{
-            position: fixed;
-            top: -50px;
-            left: 0px;
-            display: block;
-            width: 80vw;
-            height: 70vw;
-            background:#fff;
-            background-attachment: fixed;
-            background-size: cover;
-            border: 5px solid #fff;
-            border-radius: 100%;
-            z-index: -1;
-        }
         .cursor {
             width: 40vw;
             height: 40vw;
@@ -55,6 +41,9 @@ body {
             background-size: cover;
             border: 5px solid #fff;
             z-index: -1;
+        }
+        #header {
+            opacity: 0;
         }
     }
 }
@@ -96,24 +85,19 @@ button {
     pointer-events: none;
     z-index: 9999;
     transition: transform 0.5s, width 0.5s, height 0.5s ease;
-    &.white {
-        background-color: rgba(255,255,255,0.8);
-        &.active {
-            background-color: rgba(255,255,255,0.6);
-        }
-    }
     &.active {
         transform: scale(5);
-        background-color: rgba(0, 0, 0, 0.6);
     }
 }
 
 #header {
-    opacity: 0;
+    opacity: 1;
+    transition: 0.5s ease;
     .btn_gnb {
         position: fixed;
         top: 20px;
         right: 10px;
+        display: block;
         width: 60px;
         height: 60px;
         z-index: 8;
@@ -121,12 +105,6 @@ button {
         border: 2px solid #000;
         border-radius: 100%;
         transition: 0.5s ease;
-        &:hover {
-            background-color: #000;
-            span {
-                background-color: #fff;
-            }
-        }
         span {
             position: absolute;
             left: 50%;
@@ -135,6 +113,7 @@ button {
             width: 30px;
             height: 5px;
             background-color: #000;
+            transition: 0.5s ease;
             &:first-child {
                 top: 14px;
             }
@@ -143,6 +122,12 @@ button {
             }
             &:last-child {
                 top: 39px;
+            }
+        }
+        &:hover {
+            background-color: #000;
+            span {
+                background-color: #fff;
             }
         }
     }
@@ -398,7 +383,7 @@ section {
     #popup {
         position: fixed;
         top: 50%;
-        right: 25%;
+        right: 30%;
         transform: translateY(-50%);
         display: block;
         width: 450px;
@@ -660,14 +645,14 @@ section {
         border: 2px solid #000;
         opacity: 0;
         transition: 0.5s ease;
+        &:focus {
+            border-color: #f00;
+        }
         &:hover {
             background-color: #000;
             &:after {
                 color: #fff;
             }
-        }
-        &:focus {
-            border-color: #f00;
         }
         &:after {
             content: "▲";
