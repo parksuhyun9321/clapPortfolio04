@@ -37,7 +37,7 @@
   #about .inner .my_career { font-size: 1.6rem; }
   #about .inner .my_career li dl dt { font-size: 1.2rem; }
   #about .inner .my_career li dl dt span { width: 48.73px; }
-  #portfolio #popup { width: 100%; }
+  #portfolio #popup { width: 90%; }
   #portfolio .portfolio_list li .contents dl dd.site_info { font-size: 1rem; } }
 
 @media all and (max-width: 499px) { #header .gnb { width: 80vw; }
@@ -58,6 +58,8 @@
   #about .inner .skill .skill_view { justify-content: flex-start; margin: 10px 0 0 0; }
   #about .inner .skill .skill_view img { width: 40vw; }
   #about .inner .skill .skill_view p { width: 100%; margin-top: 10px; font-size: 5vw; text-align: center; }
+  #portfolio #popup { width: 90vw; font-size: 4vw; }
+  #portfolio #popup .inner .link_list { margin-top: 5vh; font-size: 6vw; }
   #portfolio .portfolio_list li .contents dl { font-size: 5vw; }
   #portfolio .portfolio_list li .contents dl dt img { width: 60vw; }
   #portfolio .portfolio_list li .contents dl dd { margin-top: 10px !important; }
