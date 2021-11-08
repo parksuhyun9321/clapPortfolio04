@@ -202,7 +202,7 @@
 
     #portfolio {
         #popup {
-        width: 100%;
+        width: 90%;
     }
         .portfolio_list {
             li {
@@ -299,6 +299,16 @@
         }
     }
     #portfolio {
+        #popup {
+            width: 90vw;
+            font-size: 4vw;
+            .inner {
+                .link_list {
+                    margin-top: 5vh;
+                    font-size: 6vw;
+                }
+            }
+        }
         .portfolio_list {
             li {
                 .contents {
